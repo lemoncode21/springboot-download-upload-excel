@@ -36,8 +36,8 @@ public class BrandCarsController {
     @Autowired
     private BrandCarsService brandCarsService;
 
-    @PostMapping(value = "/importExcel")
-    public ResponseHandler importExcel(@RequestParam("file") MultipartFile files, HttpServletRequest raw)throws NullPointerException{
+    @PostMapping(value = "/uploadExcel")
+    public ResponseHandler uploadExcel(@RequestParam("file") MultipartFile files, HttpServletRequest raw)throws NullPointerException{
         try {
 
             XSSFWorkbook workbook = new XSSFWorkbook(files.getInputStream());
